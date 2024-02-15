@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+RewriteCond %{HTTP_HOST} ^portal.claretianuniversity.edu.ng$ [OR]
+  RewriteCond %{HTTP_HOST} ^www.portal.claretianuniversity.edu.ng$
+RewriteRule (.*)$ https://www.portal.claretianuniversity.edu.ng/$1 [R=301,L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
